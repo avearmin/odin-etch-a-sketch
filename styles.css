@@ -1,0 +1,18 @@
+#grid-container {
+    height:500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+}
+
+.grid-row {
+    display: flex;
+    flex: 1;
+}
+
+.grid-square {
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
+}
