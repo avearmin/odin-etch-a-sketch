@@ -22,4 +22,14 @@ function createGridSquare() {
     return newGridSquare;
 }
 
+function drawOnHover() {
+    const gridSquares = document.querySelectorAll(".grid-square");
+    gridSquares.forEach(gridSquare => {
+        gridSquare.addEventListener("mouseover", (event) => {
+                gridSquare.style.backgroundColor = "black";
+        });
+    });
+}
+
 createGrid();
+drawOnHover();
