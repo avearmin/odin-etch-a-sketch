@@ -40,7 +40,7 @@ function displaySliderValue() {
     const slider = document.getElementById("slider");
     const sliderValue = document.getElementById("slider-value");
     slider.addEventListener("input", () => {
-        sliderValue.textContent = getSliderValue();
+        sliderValue.textContent = `${getSliderValue()}x${getSliderValue()}`;
     });
 }
 
