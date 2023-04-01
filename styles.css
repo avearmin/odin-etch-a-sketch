@@ -31,3 +31,13 @@ body {
     flex: 1;
     border: 1px solid black;
 }
+
+#color-sliders {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.color-slider-container {
+    display: flex;
+}
