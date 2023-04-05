@@ -41,3 +41,14 @@ body {
 .color-slider-container {
     display: flex;
 }
+
+#rgb-container {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+}
+
+#current-rgb-color {
+    border: 5px solid black;
+    padding: 100px;
+}

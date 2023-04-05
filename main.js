@@ -26,7 +26,7 @@ function drawOnHover() {
     const gridSquares = document.querySelectorAll(".grid-square");
     gridSquares.forEach(gridSquare => {
         gridSquare.addEventListener("mouseover", () => {
-                gridSquare.style.backgroundColor = "black";
+                gridSquare.style.backgroundColor = `rgb(${getRedValue()}, ${getGreenValue()}, ${getBlueValue()})`;
         });
     });
 }
@@ -60,9 +60,59 @@ function removeChildNodes(parent) {
     }
 }
 
+function getRedValue() {
+    const redSlider = document.getElementById("red-slider");
+    return redSlider.value;
+}
+
+function getGreenValue() {
+    const greenSlider = document.getElementById("green-slider");
+    return greenSlider.value;
+}
+
+function getBlueValue() {
+    const blueSlider = document.getElementById("blue-slider");
+    return blueSlider.value;
+}
+
+function displayRGBValues() {
+    const redSlider = document.getElementById("red-slider");
+    const greenSlider = document.getElementById("green-slider");
+    const blueSlider = document.getElementById("blue-slider");
+    const redText = document.getElementById("red-text-value");
+    const greenText = document.getElementById("green-text-value");
+    const blueText = document.getElementById("blue-text-value");
+    redSlider.addEventListener("input", () => {
+        redText.textContent = `${getRedValue()}`;
+    });
+    greenSlider.addEventListener("input", () => {
+        greenText.textContent = `${getGreenValue()}`;
+    });
+    blueSlider.addEventListener("input", () => {
+        blueText.textContent = `${getBlueValue()}`;
+    });
+}
+
+function displayRGBColor() {
+    const redSlider = document.getElementById("red-slider");
+    const greenSlider = document.getElementById("green-slider");
+    const blueSlider = document.getElementById("blue-slider");
+    const currentRGBColor = document.getElementById("current-rgb-color");
+    redSlider.addEventListener("input", () => {
+        currentRGBColor.style.backgroundColor = `rgb(${getRedValue()}, ${getGreenValue()}, ${getBlueValue()})`;
+    });
+    greenSlider.addEventListener("input", () => {
+        currentRGBColor.style.backgroundColor = `rgb(${getRedValue()}, ${getGreenValue()}, ${getBlueValue()})`;
+    });
+    blueSlider.addEventListener("input", () => {
+        currentRGBColor.style.backgroundColor = `rgb(${getRedValue()}, ${getGreenValue()}, ${getBlueValue()})`;
+    });
+}
+
 createGrid(getSliderValue());
 displaySliderValue();
 changeGridDimensions();
 drawOnHover();
-
+displayRGBValues();
+displayRGBColor();
 

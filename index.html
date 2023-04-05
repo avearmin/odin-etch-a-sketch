@@ -15,17 +15,19 @@
             </div>
             <div id="color-selector-container">
                 <p>Change Your Color Here</p>
-                <div id="color-sliders">
-                    <div class="color-slider-container">
-                        <p>Red: </p><input type="range" min="0" max="250" value="0" id="red-slider">
+                <div id="rgb-container">
+                    <div id="color-sliders">
+                        <div class="color-slider-container">
+                            <p>Red: </p><input type="range" min="0" max="250" value="250" id="red-slider"><p id="red-text-value">250</p>
+                        </div>
+                        <div class="color-slider-container">
+                            <p>Green: </p><input type="range" min="0" max="250" value="250" id="green-slider"><p id="green-text-value">250</p>
+                        </div>
+                        <div class="color-slider-container">
+                            <p>Blue: </p><input type="range" min="0" max="250" value="250" id="blue-slider"><p id="blue-text-value">250</p>
+                        </div>
                     </div>
-                    <div class="color-slider-container">
-                        <p>Green: </p><input type="range" min="0" max="250" value="0" id="green-slider">
-                    </div>
-                    <div class="color-slider-container">
-                        <p>Blue: </p><input type="range" min="0" max="250" value="0" id="blue-slider">
-                    </div>
-                    
+                    <div id="current-rgb-color"></div>
                 </div>
             </div>
         </div>
