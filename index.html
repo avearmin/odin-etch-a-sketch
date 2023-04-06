@@ -7,28 +7,28 @@
     </head>
     <body>
         <div id="content">
-            <div id="slider-container">
-                <input type="range" min="1" max="50" value="16" id="slider">
-                <p>Size: <span id="slider-value">16x16</span></p>
-            </div>
-            <div id="grid-container">
-            </div>
             <div id="color-selector-container">
-                <p>Change Your Color Here</p>
+                <div id="slider-container">
+                    <p>Size:</p>
+                    <input type="range" min="1" max="50" value="16" id="slider">
+                    <p id="slider-value">16x16</p>
+                </div>
                 <div id="rgb-container">
                     <div id="color-sliders">
                         <div class="color-slider-container">
-                            <p>Red: </p><input type="range" min="0" max="250" value="250" id="red-slider"><p id="red-text-value">250</p>
+                            <p>R:</p><input type="range" min="0" max="250" value="0" id="red-slider"><p id="red-text-value">0</p>
                         </div>
                         <div class="color-slider-container">
-                            <p>Green: </p><input type="range" min="0" max="250" value="250" id="green-slider"><p id="green-text-value">250</p>
+                            <p>G:</p><input type="range" min="0" max="250" value="0" id="green-slider"><p id="green-text-value">0</p>
                         </div>
                         <div class="color-slider-container">
-                            <p>Blue: </p><input type="range" min="0" max="250" value="250" id="blue-slider"><p id="blue-text-value">250</p>
+                            <p>B:</p><input type="range" min="0" max="250" value="0" id="blue-slider"><p id="blue-text-value">0</p>
                         </div>
                     </div>
                     <div id="current-rgb-color"></div>
                 </div>
+            </div>
+            <div id="grid-container">
             </div>
         </div>
         <script src="main.js"></script>
