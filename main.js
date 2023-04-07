@@ -109,10 +109,21 @@ function displayRGBColor() {
     });
 }
 
+function clearGridOnBtnClick() {
+    const clearBtn = document.getElementById("clear-all-btn");
+    const gridContainer = document.getElementById("grid-container");
+    clearBtn.addEventListener("click", () => {
+        removeChildNodes(gridContainer);
+        createGrid(getSliderValue());
+        drawOnHover();
+    });
+}
+
 createGrid(getSliderValue());
 displaySliderValue();
 changeGridDimensions();
 drawOnHover();
 displayRGBValues();
 displayRGBColor();
+clearGridOnBtnClick();
 
