@@ -119,6 +119,43 @@ function clearGridOnBtnClick() {
     });
 }
 
+function toggleEraserBtn(isEraserBtnOn) {
+    const eraserBtn = document.getElementById("eraser-btn");
+    eraserBtn.addEventListener("click", () => {
+        if (isEraserBtnOn === false) {
+            changeEraserBtnColor(isEraserBtnOn);
+            eraseOnHover();
+            isEraserBtnOn = true;
+        } else {
+            changeEraserBtnColor(isEraserBtnOn);
+            drawOnHover();
+            isEraserBtnOn = false;
+        }
+    });
+}
+
+function changeEraserBtnColor(isEraserBtnOn) {
+    const eraserBtn = document.getElementById("eraser-btn");
+    if (isEraserBtnOn === false) {
+        eraserBtn.style.backgroundColor = "#006C84";
+        eraserBtn.style.color = "#ffffff";
+    }
+    if (isEraserBtnOn === true) {
+        eraserBtn.style.backgroundColor = null;
+        eraserBtn.style.color = null;
+    }
+}
+
+function eraseOnHover() {
+    const gridSquares = document.querySelectorAll(".grid-square");
+    gridSquares.forEach(gridSquare => {
+        gridSquare.addEventListener("mouseover", () => {
+                gridSquare.style.backgroundColor = null;
+        });  
+    });
+}
+
+let isEraserBtnOn = false;
 createGrid(getSliderValue());
 displaySliderValue();
 changeGridDimensions();
@@ -126,4 +163,4 @@ drawOnHover();
 displayRGBValues();
 displayRGBColor();
 clearGridOnBtnClick();
-
+toggleEraserBtn(isEraserBtnOn);

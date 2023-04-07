@@ -94,3 +94,8 @@ button {
     padding-left: 25px;
     padding-right: 25px;
 }
+
+#clear-all-btn:active {
+    color: #ffffff;
+    background-color: #006C84;
+}
