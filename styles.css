@@ -48,7 +48,7 @@ body {
     flex: 1;
 }
 
-#color-selector-container {
+#options-container {
     flex-direction: column;
     background-color: #E2E8E4;
 }
