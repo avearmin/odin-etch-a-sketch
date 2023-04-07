@@ -6,29 +6,29 @@
         <title>Odin Etch-A-Sketch</title>
     </head>
     <body>
-        <div id="content">
-            <div id="color-selector-container">
-                <div id="slider-container">
+        <div id="content" class="flex justify-align-center">
+            <div id="color-selector-container" class="flex justify-align-center height-width-500px box-shadow border-5px">
+                <div id="slider-container" class="flex justify-align-center">
                     <p>Size:</p>
                     <input type="range" min="1" max="50" value="16" id="slider">
                     <p id="slider-value">16x16</p>
                 </div>
-                <div id="rgb-container">
-                    <div id="color-sliders">
-                        <div class="color-slider-container">
+                <div id="rgb-container" class="flex">
+                    <div id="color-sliders" class="flex">
+                        <div class="color-slider-container flex">
                             <p>R:</p><input type="range" min="0" max="250" value="0" id="red-slider"><p id="red-text-value">0</p>
                         </div>
-                        <div class="color-slider-container">
+                        <div class="color-slider-container flex">
                             <p>G:</p><input type="range" min="0" max="250" value="0" id="green-slider"><p id="green-text-value">0</p>
                         </div>
-                        <div class="color-slider-container">
+                        <div class="color-slider-container flex">
                             <p>B:</p><input type="range" min="0" max="250" value="0" id="blue-slider"><p id="blue-text-value">0</p>
                         </div>
                     </div>
-                    <div id="current-rgb-color"></div>
+                    <div id="current-rgb-color" class="flex border-5px"></div>
                 </div>
             </div>
-            <div id="grid-container">
+            <div id="grid-container" class="flex height-width-500px box-shadow border-5px">
             </div>
         </div>
         <script src="main.js"></script>
