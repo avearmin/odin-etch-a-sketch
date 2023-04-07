@@ -25,6 +25,10 @@ body {
     border: 5px solid #006C84;
 }
 
+.border-2px {
+    border: 2px solid #006C84;
+}
+
 #content {
     position: absolute;
     width: 100%;
@@ -75,4 +79,18 @@ body {
     background-color: black;
     height: 200px;
     width: 200px;
+    border: 2px solid #006C84;
+}
+
+#btn-container {
+    gap: 20px;
+}
+
+button {
+    background-color: #E2E8E4;
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
