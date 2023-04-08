@@ -111,11 +111,11 @@ function displayRGBColor() {
 
 function clearGridOnBtnClick() {
     const clearBtn = document.getElementById("clear-all-btn");
-    const gridContainer = document.getElementById("grid-container");
-    clearBtn.addEventListener("click", () => {
-        removeChildNodes(gridContainer);
-        createGrid(getSliderValue());
-        drawOnHover();
+    clearBtn.addEventListener("click", () => {    
+        const gridSquares = document.querySelectorAll(".grid-square");
+        gridSquares.forEach(gridSquare => {
+            gridSquare.style.backgroundColor = null;
+        });
     });
 }
 
@@ -155,12 +155,16 @@ function eraseOnHover() {
     });
 }
 
-let isEraserBtnOn = false;
-createGrid(getSliderValue());
-displaySliderValue();
-changeGridDimensions();
-drawOnHover();
-displayRGBValues();
-displayRGBColor();
-clearGridOnBtnClick();
-toggleEraserBtn(isEraserBtnOn);
+function main() {
+    let isEraserBtnOn = false;
+    createGrid(getSliderValue());
+    displaySliderValue();
+    changeGridDimensions();
+    drawOnHover();
+    displayRGBValues();
+    displayRGBColor();
+    clearGridOnBtnClick();
+    toggleEraserBtn(isEraserBtnOn);
+}
+
+main();
