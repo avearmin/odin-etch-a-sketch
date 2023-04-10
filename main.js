@@ -44,13 +44,13 @@ function displaySliderValue() {
     });
 }
 
-function changeGridDimensions() {
+function changeGridDimensions(isEraserBtnOn) {
     const gridContainer = document.getElementById("grid-container");
     const slider = document.getElementById("slider");
     slider.addEventListener("input", () => {
         removeChildNodes(gridContainer);
         createGrid(getSliderValue());
-        drawOnHover();
+        isEraserBtnOn = false ? drawOnHover() : eraseOnHover();
     });
 }
 
@@ -159,7 +159,7 @@ function main() {
     let isEraserBtnOn = false;
     createGrid(getSliderValue());
     displaySliderValue();
-    changeGridDimensions();
+    changeGridDimensions(isEraserBtnOn);
     drawOnHover();
     displayRGBValues();
     displayRGBColor();
