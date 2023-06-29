@@ -11,11 +11,11 @@ class GridManager {
   
   createGrid() {
     for (let i = 0; i < this.slider.value; i++) {
-      let newGridRow = this.createGridRow();
-      this.gridContainer.appendChild(newGridRow);
+      let row = this.createRow();
+      this.gridContainer.appendChild(row);
       for (let i = 0; i < this.slider.value; i++) {
-        let newGridSquare = this.createGridSquare();
-        newGridRow.appendChild(newGridSquare);
+        let cell = this.createCell();
+        row.appendChild(cell);
       }
     }
     if (this.mode.isDraw) {
@@ -25,16 +25,16 @@ class GridManager {
       }
   }
   
-  createGridRow() {
-    let newGridRow = document.createElement("div");
-    newGridRow.classList.add("grid-row");
-    return newGridRow;
+  createRow() {
+    let row = document.createElement("div");
+    row.classList.add("grid-row");
+    return row;
   }
 
-  createGridSquare() {
-    let newGridSquare = document.createElement("div");
-    newGridSquare.classList.add("grid-square");
-    return newGridSquare;
+  createCell() {
+    let cell = document.createElement("div");
+    cell.classList.add("grid-square");
+    return cell;
   }
   
   changeGridDimensions() {
