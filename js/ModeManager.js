@@ -6,10 +6,10 @@ class ModeManager {
   
   setToDraw() {
     this.isDraw = true;
-    let gridSquares = document.querySelectorAll(".grid-square");
-    gridSquares.forEach(gridSquare => {
-      gridSquare.addEventListener("mouseover", () => {
-        gridSquare.style.backgroundColor = `rgb(
+    let cells = document.querySelectorAll(".grid-square");
+    cells.forEach(cell => {
+      cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = `rgb(
           ${this.colorManager.red.value},
           ${this.colorManager.green.value},
           ${this.colorManager.blue.value}
@@ -20,10 +20,10 @@ class ModeManager {
   
   setToErase() {
     this.isDraw = false;
-    let gridSquares = document.querySelectorAll(".grid-square");
-    gridSquares.forEach(gridSquare => {
-      gridSquare.addEventListener("mouseover", () => {
-        gridSquare.style.backgroundColor = null;
+    let cells = document.querySelectorAll(".grid-square");
+    cells.forEach(cell => {
+      cell.addEventListener("mouseover", () => {
+        cell.style.backgroundColor = null;
       });  
     });
   }

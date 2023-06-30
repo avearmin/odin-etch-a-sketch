@@ -10,9 +10,9 @@ class UtilitiesManager {
   
   initalizeClearAllBtn() {
     this.clearAll.addEventListener("click", () => {    
-      let gridSquares = document.querySelectorAll(".grid-square");
-      gridSquares.forEach(gridSquare => {
-        gridSquare.style.backgroundColor = null;
+      let cells = document.querySelectorAll(".grid-square");
+      cells.forEach(cell => {
+        cell.style.backgroundColor = null;
       });
     });
   }
